@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 import { BiMenuAltRight } from "react-icons/bi";
@@ -13,29 +13,34 @@ const variants = {
 };
 
 function Navbar({}: Props) {
-  const [click, setClick] = useState(false);
+  const [click, setClick] = useState<boolean>(false);
 
   const handleClick = () => {
     setClick((prev) => !prev);
   };
   return (
-    <motion.nav>
+    <motion.nav className="sticky top-0 z-10 ">
       <div className="flex justify-between uppercase overflow-hidden  items-center h-24 mx-auto px-4 max-w-7xl text-black">
         <motion.h1
           initial={{ x: "-100vw" }}
           animate={{ x: 0 }}
-          transition={{ type: "spring", stiffness: 100, x: { duration: 1.2 } }}
+          transition={{
+            type: "spring",
+            stiffness: 100,
+            x: { duration: 1.2 },
+          }}
           whileInView="visible"
-          className={`w-full text-3xl   text-[#00df9a] font-bold`}
+          className={`w-full text-3xl  text-[#00df9a] font-bold`}
         >
           Shamith
         </motion.h1>
+
         <motion.ul
           initial={{ x: "100vw" }}
           animate={{ x: 0 }}
           transition={{ type: "spring", stiffness: 100, x: { duration: 1.2 } }}
           whileInView="visible"
-          className="md:flex hidden font-semibold "
+          className="md:flex hidden font-semibold text-gray-200"
         >
           <motion.li variants={variants} className="p-4 cursor-pointer">
             Home
@@ -76,7 +81,6 @@ function Navbar({}: Props) {
               show: {
                 opacity: 1,
                 transition: {
-                  delayChildren: 0.5,
                   staggerChildren: 0.5,
                 },
               },
