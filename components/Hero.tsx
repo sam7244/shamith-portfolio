@@ -1,19 +1,27 @@
 import React from "react";
 import Image from "next/image";
+import { HeroImg } from "../assets";
 type Props = {};
 
 function Hero({}: Props) {
   return (
-    <div className="grid md:grid-cols-2 h-[90vh] py-8   ">
-      <div className=" flex flex-col gap-4 justify-center items-center">
-        <h1 className="p-2 text-black font-bold text-6xl animate-bounce">
-          Shamith
+    <div className="max-w-7xl grid md:grid-cols-2 h-[90vh] py-8 mx-auto  ">
+      <div className=" flex flex-col justify-center gap-4 ">
+        <h1 className="p-2 text-white font-bold text-6xl animate-bounce">
+          Shamith Kumar Jain
         </h1>
-        <h3 className="text-xl font-semibold">Software Dev</h3>
+        <h3 className="text-xl text-white font-semibold">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+          placeat dicta ipsa voluptas?.....
+        </h3>
+        <button className="px-4 py-2 font-bold text-white rounded-md w-[30%]  bg-green-400">
+          My Resume
+        </button>
       </div>
       <div className="flex  justify-center items-center">
         <Image
-          src={"/vercel.svg"}
+          unoptimized
+          src={HeroImg}
           alt="/vercel.svg"
           height={100}
           width={100}
