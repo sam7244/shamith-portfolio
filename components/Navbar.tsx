@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 import { BiMenuAltRight } from "react-icons/bi";
@@ -19,7 +18,7 @@ function Navbar({}: Props) {
     setClick((prev) => !prev);
   };
   return (
-    <motion.nav className="sticky top-0 z-10 ">
+    <motion.nav className="sticky top-0 z-10 max-w-7xl mx-auto">
       <div className="flex justify-between uppercase overflow-hidden  items-center h-24 mx-auto px-4 max-w-7xl text-black">
         <motion.h1
           initial={{ x: "-100vw" }}
@@ -27,10 +26,11 @@ function Navbar({}: Props) {
           transition={{
             type: "spring",
             stiffness: 100,
+
             x: { duration: 1.2 },
           }}
           whileInView="visible"
-          className={`w-full text-3xl  text-[#00df9a] font-bold`}
+          className={`w-full text-3xl  text-gray-400 font-bold`}
         >
           Shamith
         </motion.h1>
@@ -40,7 +40,7 @@ function Navbar({}: Props) {
           animate={{ x: 0 }}
           transition={{ type: "spring", stiffness: 100, x: { duration: 1.2 } }}
           whileInView="visible"
-          className="md:flex hidden font-semibold text-gray-200"
+          className="md:flex hidden font-semibold text-gray-400"
         >
           <motion.li variants={variants} className="p-4 cursor-pointer">
             Home
@@ -62,13 +62,17 @@ function Navbar({}: Props) {
           </motion.li>
         </motion.ul>
         <div onClick={handleClick} className="md:hidden">
-          {click ? <AiOutlineClose size={22} /> : <BiMenuAltRight size={22} />}
+          {click ? (
+            <AiOutlineClose className="text-white" size={22} />
+          ) : (
+            <BiMenuAltRight className="text-white" size={22} />
+          )}
         </div>
 
         <div
           className={`${
             click
-              ? "fixed md:hidden left-0 top-[19px] w-[60%] text-white h-full border-r ease-in-out  duration-500 border-r-gray-300 "
+              ? "fixed md:hidden left-0  opacity-[0.9] bg-gray-900 top-0 w-[60%] text-white h-full border-r ease-in-out  duration-500 border-r-gray-300 "
               : "fixed left-[-100%] "
           }`}
         >
@@ -85,7 +89,7 @@ function Navbar({}: Props) {
                 },
               },
             }}
-            className="text-black font-semibold uppercase p-4  "
+            className="text-white space-y-6 font-semibold uppercase p-4  "
           >
             <motion.li
               variants={variants}
