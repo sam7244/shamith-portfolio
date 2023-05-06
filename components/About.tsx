@@ -22,7 +22,7 @@ function About({}: Props) {
   const child = {
     visible: {
       opacity: 1,
-      x: 0,
+
       transition: {
         type: "spring",
         damping: 12,
@@ -31,7 +31,7 @@ function About({}: Props) {
     },
     hidden: {
       opacity: 0,
-      x: 20,
+
       transition: {
         type: "spring",
         damping: 12,
@@ -75,7 +75,7 @@ function About({}: Props) {
         <h1 className="font-bold text-xl mt-14 sm:mt-0 sm:text-2xl text-center">
           Here's a little information about me.
         </h1>
-        <p className="px-4  font-semibold text-center">
+        <p className="px-4 leading-7  font-semibold text-center">
           {text.map((word, i) => (
             <motion.span variants={child} key={i}>
               {word}{" "}
