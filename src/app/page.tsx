@@ -2,6 +2,7 @@ import About from "../../components/About";
 import Hero from "../../components/Hero";
 
 import Navbar from "../../components/Navbar";
+import Projects from "../../components/Projects";
 
 export default async function Home() {
   // bg - [rgb(36, 36, 36)];
@@ -13,6 +14,9 @@ export default async function Home() {
       </section>
       <section className="snap-center">
         <About />
+      </section>
+      <section className="snap-start">
+        <Projects />
       </section>
     </div>
   );
