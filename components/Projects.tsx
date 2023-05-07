@@ -70,28 +70,28 @@ function Projects({}: Props) {
           <div className="w-80 h-90 cursor-pointer px-4 rounded-lg ">
             <Image
               alt="my-img"
-              src={MyImage}
+              src={HeroImg}
               className="w-full h-full rounded-lg hover:scale-110 transition duration-[0.2s] ease-in object-contain"
             />
           </div>
           <div className="w-80 h-90 cursor-pointer px-4 rounded-lg">
             <Image
               alt="my-img"
-              src={MyImage}
+              src={HeroImg}
               className="w-full h-full rounded-lg hover:scale-110 transition duration-[0.2s] ease-in object-contain"
             />
           </div>
           <div className="w-80 h-90 cursor-pointer px-4 rounded-lg">
             <Image
               alt="my-img"
-              src={MyImage}
+              src={HeroImg}
               className="w-full h-full rounded-lg hover:scale-110 transition duration-[0.2s] ease-in object-contain"
             />
           </div>
           <div className="w-80 h-90 cursor-pointer px-4 rounded-lg">
             <Image
               alt="my-img"
-              src={MyImage}
+              src={HeroImg}
               className="w-full h-full rounded-lg hover:scale-110 transition duration-[0.2s] ease-in object-contain"
             />
           </div>
