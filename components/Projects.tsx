@@ -110,8 +110,8 @@ function Projects({}: Props) {
         <div className="flex   transform   rounded-lg items-center gap-2 py-10 lg:flex-row ">
           
          {
-          DUMMY_DATA.map((project) =>(
-            <div className="justify-center" onClick={() => router.push(`project/${project.id}`)}>
+          DUMMY_DATA.map((project,idx) =>(
+            <div className="justify-center" onClick={() => router.push(`project/${project.id}`)} key={idx}>
             <div className="w-80 h-90 cursor-pointer px-4 rounded-lg ">
               
             <Image
