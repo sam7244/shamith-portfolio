@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { HeroImg } from "../assets";
+import Cube from "./Cube";
 type Props = {};
 
 function Hero({}: Props) {
@@ -14,19 +16,20 @@ function Hero({}: Props) {
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
           placeat dicta ipsa voluptas?.....
         </h3>
-        <button className="px-4 py-2 font-bold text-white rounded-md w-[30%]  bg-green-400">
+        <button className="px-4 py-2 ml-2 font-bold text-white rounded-md w-[30%]  bg-green-400">
           My Resume
         </button>
       </div>
-      <div className="flex  justify-center items-center">
-        <Image
+      <div className="flex  perspective-[800px]  justify-center items-center">
+        {/* <Image
           unoptimized
           src={HeroImg}
           alt="/vercel.svg"
           height={100}
           width={100}
           className="w-full h-[80%] sm:h-[90%]"
-        />
+        /> */}
+        <Cube />
       </div>
     </div>
   );

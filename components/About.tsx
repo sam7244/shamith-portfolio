@@ -42,6 +42,7 @@ function About({}: Props) {
   return (
     <div className=" max-w-7xl mx-auto h-screen px-4 gap-8 flex flex-col md:flex-row  justify-center items-center">
       <motion.div
+        drag
         initial={{
           x: -200,
           opacity: 0,
