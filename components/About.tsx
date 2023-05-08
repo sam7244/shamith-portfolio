@@ -9,7 +9,6 @@ const text =
   `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate voluptates vitae deserunt eos vel explicabo consectetur sed, dicta molestias dolor dignissimos! Ex reiciendis provident a numquam labore excepturi nisi mollitia!`.split(
     " "
   );
-console.log(text);
 
 function About({}: Props) {
   const container = {
@@ -22,7 +21,7 @@ function About({}: Props) {
   const child = {
     visible: {
       opacity: 1,
-      x: 0,
+
       transition: {
         type: "spring",
         damping: 12,
@@ -31,7 +30,7 @@ function About({}: Props) {
     },
     hidden: {
       opacity: 0,
-      x: 20,
+
       transition: {
         type: "spring",
         damping: 12,
@@ -72,10 +71,10 @@ function About({}: Props) {
         whileInView="visible"
         className="flex gap-4 text-white flex-col h-[30vh] md:h-[50vh] w-[30vh] md:w-[50vw] leading-5 items-center justify-center"
       >
-        <h1 className="font-bold text-xl mt-14 sm:mt-0 sm:text-2xl text-center">
-          Here's a little information about me.
+        <h1 className="font-bold font-epilogue underline text-xl mt-14 sm:mt-0 sm:text-2xl text-center">
+          Here&apos;s a little information about me.
         </h1>
-        <p className="px-4  font-semibold text-center">
+        <p className="px-4 leading-7  font-epilogue font-semibold text-center">
           {text.map((word, i) => (
             <motion.span variants={child} key={i}>
               {word}{" "}

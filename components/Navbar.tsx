@@ -30,7 +30,7 @@ function Navbar({}: Props) {
             x: { duration: 1.2 },
           }}
           whileInView="visible"
-          className={`w-full text-3xl  text-gray-400 font-bold`}
+          className={`w-full text-3xl font-epilogue  text-gray-400 font-bold`}
         >
           Shamith
         </motion.h1>
@@ -40,7 +40,7 @@ function Navbar({}: Props) {
           animate={{ x: 0 }}
           transition={{ type: "spring", stiffness: 100, x: { duration: 1.2 } }}
           whileInView="visible"
-          className="md:flex hidden font-semibold text-gray-400"
+          className="md:flex hidden  font-semibold text-gray-400"
         >
           <motion.li variants={variants} className="p-4 cursor-pointer">
             Home
@@ -89,7 +89,7 @@ function Navbar({}: Props) {
                 },
               },
             }}
-            className="text-white space-y-6 font-semibold uppercase p-4  "
+            className="text-white space-y-6 font-epilogue font-semibold uppercase p-4  "
           >
             <motion.li
               variants={variants}
