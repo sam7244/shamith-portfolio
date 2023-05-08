@@ -4,6 +4,8 @@ import { HeroImg, MyImage } from "../assets";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 type Props = {};
 
@@ -12,7 +14,38 @@ const text =
     " "
   );
 
+  const DUMMY_DATA = [{
+    id : 1234,
+    name : "project 1",
+    source : {HeroImg},
+    date : '12-12-2022',
+    description : "this is the best project i have ever seen"
+  },{
+    id : 3456,
+    name : "project 2",
+    source : {HeroImg},
+    date : '12-12-2022',
+    description : "this is the best project i have ever seen"
+  },
+  {
+    id : 43434,
+    name : "project 3",
+    source : {HeroImg},
+    date : '12-12-2022',
+    description : "this is the best project i have ever seen"
+  },
+  {
+    id : 56465,
+    name : "project 4",
+    source : {HeroImg},
+    date : '12-12-2022',
+    description : "this is the best project i have ever seen"
+  }
+]
+
 function Projects({}: Props) {
+
+  
   const container = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
@@ -40,6 +73,14 @@ function Projects({}: Props) {
       },
     },
   };
+
+  // const handleOnclick = (id : any) =>{
+  //     const path = `/product/${id}`;
+  //     const x = useRouter();
+  //     x.push(path);
+  // }
+
+  const router = useRouter();
   return (
     <div className="max-w-7xl flex  min-h-screen flex-col  justify-center   mx-auto">
       <motion.div
@@ -67,35 +108,27 @@ function Projects({}: Props) {
       </motion.div>
       <Marquee pauseOnHover gradient={false} speed={100}>
         <div className="flex   transform   rounded-lg items-center gap-2 py-10 lg:flex-row ">
-          <div className="w-80 h-90 cursor-pointer px-4 rounded-lg ">
+          
+         {
+          DUMMY_DATA.map((project,idx) =>(
+            <div className="justify-center" onClick={() => router.push(`project/id?id=${project.id}`)} key={idx}>
+            <div className="w-80 h-90 cursor-pointer px-4 rounded-lg ">
+              
             <Image
-              alt="my-img"
+              alt={project.name}
               src={HeroImg}
               className="w-full h-full rounded-lg hover:scale-110 transition duration-[0.2s] ease-in object-contain"
             />
+            </div>
+            <div className="text-white text-center">
+            <p>{project.name}</p>
+           
           </div>
-          <div className="w-80 h-90 cursor-pointer px-4 rounded-lg">
-            <Image
-              alt="my-img"
-              src={HeroImg}
-              className="w-full h-full rounded-lg hover:scale-110 transition duration-[0.2s] ease-in object-contain"
-            />
           </div>
-          <div className="w-80 h-90 cursor-pointer px-4 rounded-lg">
-            <Image
-              alt="my-img"
-              src={HeroImg}
-              className="w-full h-full rounded-lg hover:scale-110 transition duration-[0.2s] ease-in object-contain"
-            />
-          </div>
-          <div className="w-80 h-90 cursor-pointer px-4 rounded-lg">
-            <Image
-              alt="my-img"
-              src={HeroImg}
-              className="w-full h-full rounded-lg hover:scale-110 transition duration-[0.2s] ease-in object-contain"
-            />
-          </div>
-        </div>
+       
+          ))
+         }
+                </div>
       </Marquee>
     </div>
   );

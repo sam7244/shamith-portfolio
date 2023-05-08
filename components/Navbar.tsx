@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 import { BiMenuAltRight } from "react-icons/bi";
+
 type Props = {};
 
 const variants = {
@@ -17,6 +18,7 @@ function Navbar({}: Props) {
   const handleClick = () => {
     setClick((prev) => !prev);
   };
+
   return (
     <motion.nav className="sticky top-0 z-10 max-w-7xl mx-auto">
       <div className="flex justify-between uppercase overflow-hidden  items-center h-24 mx-auto px-4 max-w-7xl text-black">
@@ -58,6 +60,9 @@ function Navbar({}: Props) {
             Projects
           </motion.li>
           <motion.li variants={variants} className="p-4 cursor-pointer">
+            Testimonials
+          </motion.li>
+          <motion.li variants={variants} className="p-4 cursor-pointer">
             Contact
           </motion.li>
         </motion.ul>
@@ -68,7 +73,6 @@ function Navbar({}: Props) {
             <BiMenuAltRight className="text-white" size={22} />
           )}
         </div>
-
         <div
           className={`${
             click
@@ -108,6 +112,12 @@ function Navbar({}: Props) {
               className="p-4 border-b  cursor-pointer border-b-gray-600"
             >
               Projects
+            </motion.li>
+            <motion.li
+              variants={variants}
+              className="p-4 border-b  cursor-pointer border-b-gray-600"
+            >
+              Testimonials
             </motion.li>
             <motion.li
               variants={variants}

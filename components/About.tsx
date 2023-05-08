@@ -11,6 +11,7 @@ const text =
   );
 
 function About({}: Props) {
+
   const container = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
@@ -18,6 +19,7 @@ function About({}: Props) {
       transition: { staggerChildren: 0.12, delayChildren: 0.04 * i },
     }),
   };
+  
   const child = {
     visible: {
       opacity: 1,
