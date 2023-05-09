@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 import { BiMenuAltRight } from "react-icons/bi";
-
+import Link from "next/link";
 type Props = {};
 
 const variants = {
@@ -99,7 +99,9 @@ function Navbar({}: Props) {
               variants={variants}
               className="p-4 border-b mt-20   cursor-pointer border-b-gray-600"
             >
+              <Link href='/'>
               Home
+              </Link>
             </motion.li>
             <motion.li
               variants={variants}

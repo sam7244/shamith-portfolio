@@ -112,7 +112,7 @@ function Projects({}: Props) {
          {
           DUMMY_DATA.map((project,idx) =>(
             <div className="justify-center" onClick={() => router.push(`project/id?id=${project.id}`)} key={idx}>
-            <div className="w-80 h-90 cursor-pointer px-4 rounded-lg ">
+            <div className="w-80 h-90 cursor-pointer px-4 rounded-lg contained">
               
             <Image
               alt={project.name}
