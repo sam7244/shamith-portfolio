@@ -6,6 +6,7 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  mode: "jit",
   theme: {
     extend: {
       backgroundImage: {
@@ -18,5 +19,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@kamona/tailwindcss-perspective")],
 };
