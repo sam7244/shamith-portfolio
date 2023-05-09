@@ -3,6 +3,7 @@ import Hero from "../../components/Hero";
 
 import Navbar from "../../components/Navbar";
 import Projects from "../../components/Projects";
+import Footer from "../../components/Footer";
 
 export default async function Home() {
   // bg - [rgb(36, 36, 36)];
@@ -18,6 +19,9 @@ export default async function Home() {
       <section className="snap-start">
         <Projects />
       </section>
+      <footer>
+        <Footer/>
+      </footer>
     </div>
   );
 }

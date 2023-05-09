@@ -11,7 +11,8 @@ function Cube({}: props) {
   useAnimationFrame((t) => {
     const rotate = Math.sin(t / 10000) * 200;
     const y = (1 + Math.sin(t / 1000)) * -50;
-    ref.current.style.transform = `translateY(${y}px) rotateX(${rotate}deg) rotateY(${rotate}deg)`;
+    // if(ref.current != 'undefined')
+    // ref.current.style.transform = `translateY(${y}px) rotateX(${rotate}deg) rotateY(${rotate}deg)`;
   });
   return (
     <div className=" w-[200px] h-[200px]">
