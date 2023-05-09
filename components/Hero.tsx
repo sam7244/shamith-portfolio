@@ -5,10 +5,6 @@ import Cube from "./Cube";
 type Props = {};
 
 function Hero({}: Props) {
-  const controls = useDragControls();
-  function startDrag(event: any) {
-    controls.start(event, { snapToCursor: true });
-  }
   return (
     <div className="max-w-7xl  grid md:grid-cols-2 h-[90vh] py-8 mx-auto  overflow-hidden ">
       <div className=" flex flex-col justify-center gap-4 ">
@@ -23,11 +19,7 @@ function Hero({}: Props) {
           My Resume
         </button>
       </div>
-      <motion.div
-        drag="x"
-        dragControls={controls}
-        className="flex overflow-hidden  perspective-[800px]  justify-center items-center"
-      >
+      <motion.div className="flex overflow-hidden  perspective-[800px]  justify-center items-center">
         {/* <Image
           unoptimized
           src={HeroImg}
