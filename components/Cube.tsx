@@ -1,19 +1,20 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useAnimationFrame } from "framer-motion";
 
 const side = `absolute w-full h-full opacity-[0.6]`;
 type props = {};
 
 function Cube({}: props) {
-  const ref = useRef<any>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useAnimationFrame((t) => {
     const rotate = Math.sin(t / 10000) * 200;
     const y = (1 + Math.sin(t / 1000)) * -50;
-    // if(ref.current != 'undefined')
-    // ref.current.style.transform = `translateY(${y}px) rotateX(${rotate}deg) rotateY(${rotate}deg)`;
+    if (!ref.current) return;
+    ref.current.style.transform = `translateY(${y}px) rotateX(${rotate}deg) rotateY(${rotate}deg)`;
   });
+
   return (
     <div className=" w-[200px] h-[200px]">
       <div
