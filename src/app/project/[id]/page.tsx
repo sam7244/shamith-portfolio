@@ -100,7 +100,7 @@ const ProjectHomePage = () => {
   return (
     <div className="bg-gray-900 min-h-screen px-4">
       <Navbar />
-      <div className="max-w-7xl mx-auto mt-6 md:mt-4 mb-4 border-b border-gray-600  gap-8 grid md:grid-cols-2 justify-center items-center">
+      <div className="max-w-7xl mx-auto mt-6 md:mt-4 mb-4 border-b border-gray-600  gap-8 grid md:grid-cols-2 justify-center items-center sm:h-[100vh] lg:h-[80vh]">
         <div className="">
           <motion.div
             drag
@@ -127,7 +127,7 @@ const ProjectHomePage = () => {
               src={HeroImg}
             />
           </motion.div>
-          <div className="flex gap-2 mt-10">
+          <div className="flex gap-1 mt-8 justify-center">
             <div className=" p-5 rounded-xl">
               <Image
                 alt="vercel"
@@ -202,7 +202,7 @@ const ProjectHomePage = () => {
         </motion.div>
       </div>
 
-      <div className="max-w-7xl mx-auto justify-center items-center">
+      <div className="max-w-7xl mx-auto justify-center items-center sm:h-[90vh] md:h-[70vh] lg:h-[65vh]">
         <div className=" font-bold font-epilogue mt-4 p-4  text-3xl text-center  text-white ">
           <h1 className="h-full w-full bg-gray-900">You May also Like</h1>
         </div>
