@@ -4,6 +4,58 @@ import Hero from "../../components/Hero";
 import Navbar from "../../components/Navbar";
 import Projects from "../../components/Projects";
 import Footer from "../../components/Footer";
+import Skills from "../../components/Skills";
+
+const skills = [
+  {
+    progress: "50%",
+  },
+  {
+    progress: "50%",
+  },
+  {
+    progress: "50%",
+  },
+  {
+    progress: "50%",
+  },
+  {
+    progress: "50%",
+  },
+  {
+    progress: "50%",
+  },
+  {
+    progress: "50%",
+  },
+  {
+    progress: "50%",
+  },
+  {
+    progress: "50%",
+  },
+  {
+    progress: "50%",
+  },
+  {
+    progress: "50%",
+  },
+  {
+    progress: "50%",
+  },
+  {
+    progress: "50%",
+  },
+  {
+    progress: "50%",
+  },
+  {
+    progress: "50%",
+  },
+  {
+    progress: "50%",
+  },
+];
 
 export default async function Home() {
   // bg - [rgb(36, 36, 36)];
@@ -19,8 +71,11 @@ export default async function Home() {
       <section className="snap-start">
         <Projects />
       </section>
+      <section className="snap-start">
+        <Skills skills={skills} />
+      </section>
       <footer>
-        <Footer/>
+        <Footer />
       </footer>
     </div>
   );
