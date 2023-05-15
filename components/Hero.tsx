@@ -6,7 +6,7 @@ type Props = {};
 
 function Hero({}: Props) {
   return (
-    <div className="max-w-7xl  grid md:grid-cols-2 h-[90vh] py-8 mx-auto  overflow-hidden ">
+    <div className="max-w-7xl  grid md:grid-cols-2 h-[90vh] py-1 mx-auto  overflow-hidden ">
       <div className=" flex flex-col justify-center gap-4 ">
         <h1 className="p-2 font-epilogue text-white font-bold text-3xl sm:text-6xl animate-bounce">
           Shamith Kumar Jain
@@ -19,7 +19,7 @@ function Hero({}: Props) {
           My Resume
         </button>
       </div>
-      <motion.div className="flex overflow-hidden  perspective-[800px]  justify-center items-center">
+      <motion.div className="flex mt-14  perspective-[800px]  justify-center items-center">
         {/* <Image
           unoptimized
           src={HeroImg}

@@ -16,10 +16,10 @@ function Cube({}: props) {
   });
 
   return (
-    <div className=" w-[200px] h-[200px]">
+    <div className=" w-[150px] h-[150px] md:w-[200px] md:h-[200px]">
       <div
         ref={ref}
-        className="w-[200px] h-[200px] relative transform-style-3d"
+        className="w-[150px] h-[150px] md:w-[200px] md:h-[200px] relative transform-style-3d"
       >
         <div
           className={`${side} rotate-y-0 translate-z-[100px] bg-[#ee4444]`}
