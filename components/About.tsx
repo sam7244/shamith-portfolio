@@ -11,7 +11,6 @@ const text =
   );
 
 function About({}: Props) {
-
   const container = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
@@ -19,7 +18,7 @@ function About({}: Props) {
       transition: { staggerChildren: 0.12, delayChildren: 0.04 * i },
     }),
   };
-  
+
   const child = {
     visible: {
       opacity: 1,
@@ -42,7 +41,7 @@ function About({}: Props) {
   };
 
   return (
-    <div className=" max-w-7xl mx-auto h-screen px-4 gap-8 flex flex-col md:flex-row  justify-center items-center">
+    <div className=" max-w-7xl mx-auto h-screen px-4  grid md:grid-cols-2 ">
       <motion.div
         drag
         initial={{
@@ -57,13 +56,14 @@ function About({}: Props) {
           opacity: 1,
           x: 0,
         }}
+        className="flex items-center  justify-center "
       >
         <Image
           alt="vercel"
           height={40}
           width={40}
           unoptimized
-          className="object-cover rounded-lg  h-[30vh] md:h-[50vh] w-[30vh] md:w-[30vw]"
+          className="object-contain rounded-lg h-[200px] w-[200px] sm:h-[350px] sm:w-[250px] md:h-[50vh] md:w-[50vh]"
           src={MyImage}
         />
       </motion.div>
@@ -72,12 +72,12 @@ function About({}: Props) {
         variants={container}
         initial="hidden"
         whileInView="visible"
-        className="flex gap-4 text-white flex-col h-[30vh] md:h-[50vh] w-[30vh] md:w-[50vw] leading-5 items-center justify-center"
+        className="flex gap-4 text-white flex-col p-2 leading-5 md:justify-center   items-center"
       >
-        <h1 className="font-bold font-epilogue underline text-xl mt-14 sm:mt-0 sm:text-2xl text-center">
+        <h1 className="font-bold font-epilogue underline text-xl  md:mt-0 sm:text-2xl text-center">
           Here&apos;s a little information about me.
         </h1>
-        <p className="px-4 leading-7  font-epilogue font-semibold text-center">
+        <p className="px-4 leading-7  font-epilogue font-semibold text-center ">
           {text.map((word, i) => (
             <motion.span variants={child} key={i}>
               {word}{" "}
