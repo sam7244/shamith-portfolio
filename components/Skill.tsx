@@ -2,12 +2,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-function Skill({ skill, directionLeft, idx }: any) {
+function Skill({ skill, directionLeft }: any) {
   return (
     <div className="group relative flex cursor-pointer ">
       <motion.img
         initial={{
-          x: directionLeft ? -200 : 200,
+          x: directionLeft ? -100 : 100,
           opacity: 0,
         }}
         transition={{
