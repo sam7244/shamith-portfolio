@@ -16,11 +16,11 @@ function Cube({}: props) {
   });
 
   return (
-    <div className=" w-[150px] h-[150px] md:w-[200px] md:h-[200px]">
+    <div className=" w-[160px] h-[160px] md:w-[200px] md:h-[200px] mt-8 md:mt-0">
       <div
         // bg-[#ee4444] bg-[#ff0055] [#22cc88] [#0099ff]
         ref={ref}
-        className="w-[150px] h-[150px] md:w-[200px] md:h-[200px] relative transform-style-3d"
+        className="w-[160px] h-[160px] md:w-[200px] md:h-[200px] relative transform-style-3d"
       >
         <div
           className={`${side} rotate-y-0 translate-z-[100px] bg-gray-400 `}
