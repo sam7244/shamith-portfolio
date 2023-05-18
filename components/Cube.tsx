@@ -18,26 +18,27 @@ function Cube({}: props) {
   return (
     <div className=" w-[150px] h-[150px] md:w-[200px] md:h-[200px]">
       <div
+        // bg-[#ee4444] bg-[#ff0055] [#22cc88] [#0099ff]
         ref={ref}
         className="w-[150px] h-[150px] md:w-[200px] md:h-[200px] relative transform-style-3d"
       >
         <div
-          className={`${side} rotate-y-0 translate-z-[100px] bg-[#ee4444]`}
+          className={`${side} rotate-y-0 translate-z-[100px] bg-gray-400 `}
         />
         <div
-          className={`${side}  -rotate-y-90 translate-z-[100px] bg-[#8855ff]`}
+          className={`${side}  -rotate-y-90 translate-z-[100px] bg-gray-800`}
         />
         <div
-          className={`${side}  rotate-y-90 translate-z-[100px] bg-[#ffcc00]`}
+          className={`${side}  rotate-y-90 translate-z-[100px] bg-zinc-900 border-2 border-white`}
         />
         <div
-          className={`${side}  rotate-x-90 translate-z-[100px] bg-[#0099ff]`}
+          className={`${side}  rotate-x-90 translate-z-[100px] bg-zinc-900 border-2`}
         />
         <div
-          className={`${side}    -rotate-x-90 translate-z-[100px] bg-[#22cc88]`}
+          className={`${side}    -rotate-x-90 translate-z-[100px] bg-zinc-900 border-2`}
         />
         <div
-          className={`${side}  rotate-y-180 translate-z-[100px] bg-[#ff0055]`}
+          className={`${side}  rotate-y-180 translate-z-[100px] bg-zinc-900 border-2`}
         />
       </div>
     </div>

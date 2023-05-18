@@ -76,7 +76,7 @@ function Navbar({}: Props) {
         <div
           className={`${
             click
-              ? "fixed md:hidden left-0  opacity-[0.9] bg-gray-900 top-0 w-[60%] text-white h-full border-r ease-in-out  duration-500 border-r-gray-300 "
+              ? "fixed md:hidden left-0  opacity-[0.9] bg-zinc-900 top-0 w-[60%] text-white h-full border-r ease-in-out  duration-500 border-r-gray-300 "
               : "fixed left-[-100%] "
           }`}
         >
@@ -99,9 +99,7 @@ function Navbar({}: Props) {
               variants={variants}
               className="p-4 border-b mt-20   cursor-pointer border-b-gray-600"
             >
-              <Link href='/'>
-              Home
-              </Link>
+              <Link href="/">Home</Link>
             </motion.li>
             <motion.li
               variants={variants}
