@@ -19,11 +19,10 @@
     "eslint-config-next": "13.3.4",
     "framer-motion": "^10.12.8",
     "next": "13.3.4",
-<<<<<<< HEAD
+
     "next-themes": "^0.2.1",
-=======
+
     "next-sanity": "^4.3.2",
->>>>>>> 99c1c259e5b8f87889bf0a2fe0fba3cbc23a378c
     "postcss": "8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
