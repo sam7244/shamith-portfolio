@@ -60,18 +60,21 @@ const skills = [
 export default async function Home() {
   // bg - [rgb(36, 36, 36)];
   return (
-    <div className="bg-black   snap-y snap-mandatory mx-auto min-h-screen p-4">
+
+
+    <div className="    snap-y snap-mandatory mx-auto min-h-screen p-4">
+
       <Navbar />
-      <section className="snap-start">
+      <section className="snap-start max-w-7xl mx-auto">
         <Hero />
       </section>
-      <section className="snap-center">
+      <section className="snap-center max-w-7xl mx-auto">
         <About />
       </section>
-      <section className="snap-start">
+      <section className="snap-start max-w-7xl mx-auto">
         <Projects />
       </section>
-      <section className="snap-start">
+      <section className="snap-start max-w-7xl mx-auto">
         <Skills skills={skills} />
       </section>
       <footer>

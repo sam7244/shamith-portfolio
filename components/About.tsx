@@ -43,7 +43,6 @@ function About({}: Props) {
   return (
     <div className=" max-w-7xl mx-auto h-screen px-4  grid md:grid-cols-2 ">
       <motion.div
-        drag
         initial={{
           x: -200,
           opacity: 0,
