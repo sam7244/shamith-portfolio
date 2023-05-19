@@ -8,7 +8,7 @@ function Hero({}: Props) {
   return (
     <div className="max-w-7xl  grid md:grid-cols-2 h-[90vh] py-1 mx-auto  overflow-hidden ">
       <div className=" flex flex-col justify-center gap-4 ">
-        <h1 className="p-2 font-epilogue text-white font-bold text-3xl sm:text-6xl animate-bounce">
+        <h1 className="p-2 font-epilogue text-white font-bold text-3xl sm:text-6xl animate-bounce text-cyan-400">
           Shamith Kumar Jain
         </h1>
         <h3 className="sm:text-xl p-2 font-epilogue text-white font-semibold">

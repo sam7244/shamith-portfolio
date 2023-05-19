@@ -32,7 +32,7 @@ function Navbar({}: Props) {
             x: { duration: 1.2 },
           }}
           whileInView="visible"
-          className={`w-full text-3xl font-epilogue  text-gray-400 font-bold`}
+          className={`w-full text-3xl font-epilogue  text-gray-400 font-bold text-cyan-400`}
         >
           Shamith
         </motion.h1>
@@ -44,10 +44,10 @@ function Navbar({}: Props) {
           whileInView="visible"
           className="md:flex hidden  font-semibold text-gray-400"
         >
-          <motion.li variants={variants} className="p-4 cursor-pointer">
+          <motion.li variants={variants} className="p-4 cursor-pointer text-cyan-400">
             Home
           </motion.li>
-          <motion.li variants={variants} className="p-4 cursor-pointer">
+          <motion.li variants={variants} className="p-4 cursor-pointer text-cyan-400">
             About
           </motion.li>
           <motion.li
@@ -55,14 +55,14 @@ function Navbar({}: Props) {
               hidden: { opacity: 0, x: -60 },
               show: { opacity: 1, x: 0 },
             }}
-            className="p-4 cursor-pointer"
+            className="p-4 cursor-pointer text-cyan-400"
           >
             Projects
           </motion.li>
-          <motion.li variants={variants} className="p-4 cursor-pointer">
+          <motion.li variants={variants} className="p-4 cursor-pointer text-cyan-400">
             Testimonials
           </motion.li>
-          <motion.li variants={variants} className="p-4 cursor-pointer">
+          <motion.li variants={variants} className="p-4 cursor-pointer text-cyan-400">
             Contact
           </motion.li>
         </motion.ul>
