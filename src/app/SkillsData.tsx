@@ -12,7 +12,7 @@ async function SkillsData({}) {
 *[_type == "skills"]
 `;
   const skills: SkillType[] = await client.fetch(query);
-  console.log(skills);
+
   return (
     <div>
       <Skills skills={skills} />

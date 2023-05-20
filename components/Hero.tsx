@@ -8,7 +8,7 @@ type Props = {};
 
 function Hero({}: Props) {
   return (
-    <div className="max-w-7xl  min-h-screen relative grid md:grid-cols-2 h-[90vh] py-1 mx-auto gap-5 overflow-hidden ">
+    <div className="max-w-7xl  min-h-screen relative grid md:grid-cols-2 h-full py-1 mx-auto gap-5 overflow-hidden ">
       <Particles className="absolute inset-0 -z-10 " />
 
       <div className="from-zinc-200/20 to-zinc-200 flex flex-col  justify-center py-8 md:py-0 gap-4 ">
