@@ -4,63 +4,11 @@ import Hero from "../../components/Hero";
 import Navbar from "../../components/Navbar";
 import Projects from "../../components/Projects";
 import Footer from "../../components/Footer";
-import Skills from "../../components/Skills";
+import SkillsData from "./SkillsData";
 
-const skills = [
-  {
-    progress: "50%",
-  },
-  {
-    progress: "50%",
-  },
-  {
-    progress: "50%",
-  },
-  {
-    progress: "50%",
-  },
-  {
-    progress: "50%",
-  },
-  {
-    progress: "50%",
-  },
-  {
-    progress: "50%",
-  },
-  {
-    progress: "50%",
-  },
-  {
-    progress: "50%",
-  },
-  {
-    progress: "50%",
-  },
-  {
-    progress: "50%",
-  },
-  {
-    progress: "50%",
-  },
-  {
-    progress: "50%",
-  },
-  {
-    progress: "50%",
-  },
-  {
-    progress: "50%",
-  },
-  {
-    progress: "50%",
-  },
-];
-
-export default async function Home() {
-  // bg - [rgb(36, 36, 36)];
+export default function Home() {
   return (
-    <div className="    snap-y snap-mandatory mx-auto min-h-screen p-4">
+    <div className="snap-y snap-mandatory mx-auto min-h-screen p-4">
       <Navbar />
       <section className="snap-start max-w-7xl mx-auto">
         <Hero />
@@ -72,7 +20,8 @@ export default async function Home() {
         <Projects />
       </section>
       <section className="snap-start max-w-7xl mx-auto">
-        <Skills skills={skills} />
+        {/* @ts-expect-error Server Component */}
+        <SkillsData />
       </section>
       <footer>
         <Footer />

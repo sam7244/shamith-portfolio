@@ -2,8 +2,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Skill from "./Skill";
+import { SkillType } from "../types";
 
-const Skills = ({ skills }: any) => {
+type Props = {
+  skills: SkillType[];
+};
+
+const Skills = ({ skills }: Props) => {
   return (
     <motion.div
       className=" flex relative flex-col text-center md:text-left xl:flex-row
