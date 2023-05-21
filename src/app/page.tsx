@@ -28,6 +28,7 @@ export default function Home() {
         <SkillsData />
       </section>
       <section className="snap-start max-w-7xl mx-auto">
+        {/* @ts-expect-error Server Component */}
         <CertificateData />
       </section>
       <footer>
