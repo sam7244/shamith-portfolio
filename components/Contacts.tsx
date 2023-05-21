@@ -10,6 +10,9 @@ import {
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 import { FiAtSign, FiPhone } from 'react-icons/fi';
 import Image from 'next/image';
+import TypingText from './TypingText';
+import TitleText from './TitleText';
+import { motion } from 'framer-motion';
 
 
 const socialsData = {
@@ -43,8 +46,16 @@ function Contacts() {
     id='contacts'
    >
     <div className={styles.contactsContainer}>
-    <h1 >Contacts</h1>
-    <div className={styles.contactsBody}>
+    <motion.div 
+     initial="hidden"
+     whileInView="show"
+     viewport={{ once: false, amount: 0.25 }}
+     className={`${styles.innerWidth} mx-auto flex  flex-col mb-10`}
+     >
+        <TypingText title="| Get Ahold of Us" textStyles="text-center" />
+        <TitleText title="Contact " textStyles="text-center" />
+    </motion.div>
+    <div className={`${styles.contactsBody} `}>
     <div className={styles.contactsForm}>
     <form  >
               <div className={styles.inputContainer}>
@@ -271,13 +282,7 @@ function Contacts() {
 
     </div>
     </div>
-    <Image
-      src="/contactImg.jpeg"
-      alt='contacts'
-      width={100}
-      height={100}
-      className={styles.contactsImg}
-    />
+   
     </div>
   )
 }
