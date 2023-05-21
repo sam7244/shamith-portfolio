@@ -32,9 +32,7 @@ function Navbar({}: Props) {
             x: { duration: 1.2 },
           }}
           whileInView="visible"
-
           className={`w-full text-3xl   text-zinc-300 font-bold`}
-
         >
           Shamith
         </motion.h1>
@@ -46,53 +44,46 @@ function Navbar({}: Props) {
           whileInView="visible"
           className="md:flex hidden  font-semibold text-zinc-300"
         >
-
           <motion.li
             variants={variants}
             className=" group text-zinc-300 p-4 transition duration-600 cursor-pointer"
           >
-
             Home
-            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gradient-to-r from-zinc-200/60 via-zinc-200 to-zinc-200/60"></span>
           </motion.li>
 
           <motion.li
             variants={variants}
             className="group text-zinc-300 p-4 cursor-pointer"
           >
-
             About
-            <span className="max-w-0 block  group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+            <span className="max-w-0 block  group-hover:max-w-full transition-all duration-500 h-0.5 bg-gradient-to-r from-zinc-200/60 via-zinc-200 to-zinc-200/60"></span>
           </motion.li>
           <motion.li
             variants={{
               hidden: { opacity: 0, x: -60 },
               show: { opacity: 1, x: 0 },
             }}
-
             className=" group transition duration-500 p-4 cursor-pointer"
-
           >
             Projects
-            <span className="max-w-0 block group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+            <span className="max-w-0 block group-hover:max-w-full transition-all duration-500 h-0.5 bg-gradient-to-r from-zinc-200/60 via-zinc-200 to-zinc-200/60"></span>
           </motion.li>
 
           <motion.li
             variants={variants}
             className="group transition duration-500 p-4 cursor-pointer"
           >
-
             Testimonials
-            <span className="max-w-0 block group-hover:max-w-full h-0.5 bg-white transition-all duration-500"></span>
+            <span className="max-w-0 block group-hover:max-w-full h-0.5 bg-gradient-to-r from-zinc-200/60 via-zinc-200 to-zinc-200/60 transition-all duration-500"></span>
           </motion.li>
 
           <motion.li
             variants={variants}
             className=" group transition duration-500 p-4 cursor-pointer"
           >
-
             Contact
-            <span className="max-w-0 block h-0.5 bg-white group-hover:max-w-full transition-all duration-500"></span>
+            <span className="max-w-0 block h-0.5 bg-gradient-to-r from-zinc-200/60 via-zinc-200 to-zinc-200/60 group-hover:max-w-full transition-all duration-500"></span>
           </motion.li>
         </motion.ul>
         <div onClick={handleClick} className="md:hidden">

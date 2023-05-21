@@ -47,25 +47,39 @@ const staggerContainer = (staggerChildren: any, delayChildren: any) => ({
 
 const Certificate = ({ certificate }: props) => {
   return (
-    <section id="certificates" className={`${styles.paddings} relative z-10 `}>
-      <motion.div
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-        className={`${styles.innerWidth} mx-auto flex  flex-col`}
+    <section className="relative w-full">
+      {/* Radial gradient */}
+      <div
+        className="absolute inset-0 overflow-hidden pointer-events-none -z-10"
+        aria-hidden="true"
       >
-        <TypingText title="| Proof of work" textStyles="text-center" />
-        <TitleText title="Certifications" textStyles="text-center" />
-        <div className="mt-[50px] flex flex-col gap-[30px]">
-          {certificate?.map((certificate, i) => (
-            <CertificateCard
-              key={`${certificate?.name}-${i}`}
-              certificate={certificate}
-              index={i}
-            />
-          ))}
+        <div className="absolute top-0 flex items-center justify-center w-1/3 -translate-y-1/2 left-1/2 -translate-x-1/2 aspect-square">
+          <div className="absolute inset-0 translate-z-0 bg-primary-500 rounded-full blur-[120px] opacity-50" />
         </div>
-      </motion.div>
+      </div>
+      <section
+        id="certificates"
+        className={`${styles.paddings} relative z-10 `}
+      >
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.25 }}
+          className={`${styles.innerWidth} mx-auto flex  flex-col`}
+        >
+          <TypingText title="| Proof of work" textStyles="text-center" />
+          <TitleText title="Certifications" textStyles="text-center" />
+          <div className="mt-[50px] flex flex-col gap-[30px]">
+            {certificate?.map((certificate, i) => (
+              <CertificateCard
+                key={`${certificate?.name}-${i}`}
+                certificate={certificate}
+                index={i}
+              />
+            ))}
+          </div>
+        </motion.div>
+      </section>
     </section>
   );
 };
