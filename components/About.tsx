@@ -73,7 +73,7 @@ function About({}: Props) {
         whileInView="visible"
         className="flex gap-4 text-white flex-col p-2 leading-5 md:justify-center   items-center"
       >
-        <h1 className="font-bold font-epilogue underline text-xl  md:mt-0 sm:text-2xl text-center">
+        <h1 className="font-bold font-epilogue underline text-xl  md:mt-0 sm:text-2xl text-center text-cyan-400">
           Here&apos;s a little information about me.
         </h1>
         <p className="px-4 leading-7  font-epilogue font-semibold text-center ">

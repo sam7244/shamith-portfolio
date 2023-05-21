@@ -89,7 +89,7 @@ function Projects({}: Props) {
         whileInView="visible"
         className="mt-14 text-center text-white "
       >
-        <h3 className="text-3xl py-1 font-epilogue font-bold dark:text-white">
+        <h3 className="text-3xl py-1 font-epilogue font-bold dark:text-white text-cyan-400">
           Projects{" "}
         </h3>
         <p className="text-md font-epilogue py-2 leading-8 dark:text-gray-200 ">

@@ -8,7 +8,9 @@ import SkillsData from "./SkillsData";
 
 export default function Home() {
   return (
+
     <div className="snap-y snap-mandatory mx-auto min-h-screen p-4">
+
       <Navbar />
       <section className="snap-start max-w-7xl mx-auto">
         <Hero />
