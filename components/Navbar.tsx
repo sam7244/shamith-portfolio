@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 import { BiMenuAltRight } from "react-icons/bi";
@@ -86,12 +86,8 @@ function Navbar({}: Props) {
             <span className="max-w-0 block h-0.5 bg-gradient-to-r from-zinc-200/60 via-zinc-200 to-zinc-200/60 group-hover:max-w-full transition-all duration-500"></span>
           </motion.li>
         </motion.ul>
-        <div onClick={handleClick} className="md:hidden">
-          {click ? (
-            <AiOutlineClose className="text-white" size={22} />
-          ) : (
-            <BiMenuAltRight className="text-white" size={22} />
-          )}
+        <div onClick={handleClick} className="md:hidden text-white">
+          {click ? <AiOutlineClose size={22} /> : <BiMenuAltRight size={22} />}
         </div>
         <div
           className={`${
