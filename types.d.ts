@@ -18,3 +18,12 @@ export interface SkillType extends SanityBody {
   progress: number;
   icon: Image;
 }
+
+export interface CertificateType extends SanityBody {
+  _type: "certificate";
+  name: string;
+  description: number;
+  image: Image;
+  link : string;
+}
+

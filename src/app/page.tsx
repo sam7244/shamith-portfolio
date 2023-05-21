@@ -5,6 +5,8 @@ import Navbar from "../../components/Navbar";
 import Projects from "../../components/Projects";
 import Footer from "../../components/Footer";
 import SkillsData from "./SkillsData";
+import Certificate from "../../components/Certificate";
+import CertificateData from "./CertificateData";
 
 export default function Home() {
   return (
@@ -24,6 +26,9 @@ export default function Home() {
       <section className="snap-start max-w-7xl mx-auto">
         {/* @ts-expect-error Server Component */}
         <SkillsData />
+      </section>
+      <section className="snap-start max-w-7xl mx-auto">
+        <CertificateData />
       </section>
       <footer>
         <Footer />
