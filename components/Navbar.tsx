@@ -20,7 +20,7 @@ function Navbar({}: Props) {
   };
 
   return (
-    <motion.nav className="sticky top-0 z-10 max-w-7xl mx-auto">
+    <motion.nav className="sticky top-0 z-30 max-w-7xl mx-auto">
       <div className="flex justify-between uppercase overflow-hidden  items-center h-18 pt-3 mx-auto px-4 max-w-7xl text-black">
         <motion.h1
           initial={{ x: "-100vw" }}
