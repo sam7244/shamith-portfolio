@@ -3,26 +3,34 @@ import React from "react";
 import { motion } from "framer-motion";
 import Skill from "./Skill";
 import { SkillType } from "../types";
-
+import styles from  '../src/app/styles/Contacts.module.css'
+import TypingText from "./TypingText";
+import TitleText from "./TitleText";
 type Props = {
   skills: SkillType[];
 };
 
 const Skills = ({ skills }: Props) => {
   return (
+    <div className="flex flex-col min-h-screen">
+    <div>
+    <motion.div 
+     initial="hidden"
+     whileInView="show"
+     viewport={{ once: false, amount: 0.25 }}
+     className={`${styles.innerWidth} mx-auto flex  flex-col mb-10`}
+     >
+        <TypingText title="| Test My SKills" textStyles="text-center" />
+        <TitleText title="Skills " textStyles="text-center" />
+    </motion.div>
+    </div>
+    <div>
     <motion.div
       className=" flex relative flex-col text-center md:text-left xl:flex-row
-    max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center"
+    max-w-[2000px] xl:px-10  justify-center xl:space-y-0 mx-auto items-center"
     >
-      <h3 className="absolute top-16 xl:top-6 uppercase mb-5 tracking-[20px] text-gray-500 text-2xl">
-        Skills
-      </h3>
-      <h3
-        className="absolute top-28 xl:top-16 uppercase tracking-[3px] text-gray-500 
-        text-sm "
-      >
-        Hover over a skill for current proficiency{" "}
-      </h3>
+      
+      
       <div className="grid  grid-cols-4  gap-5 ">
         {skills?.slice(0, skills?.length / 2).map((skill: any, idx: number) => (
           <Skill
@@ -42,6 +50,8 @@ const Skills = ({ skills }: Props) => {
         ))}
       </div>
     </motion.div>
+    </div>
+    </div>
   );
 };
 

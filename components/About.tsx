@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 import { MyImage } from "../assets";
 import { motion } from "framer-motion";
-import { Particles } from "./Particles";
 type Props = {};
 
 const text =
@@ -42,14 +41,7 @@ function About({}: Props) {
   };
 
   return (
-    <div
-      className=" max-w-7xl relative mx-auto h-screen px-4 group/item  grid md:grid-cols-2 "
-      data-aos="fade-down"
-    >
-      <Particles
-        className="absolute inset-0 -z-10 opacity-10 group-hover/item:opacity-100   transition-opacity duration-1000 ease-in-out"
-        quantity={40}
-      />
+    <div className=" max-w-7xl mx-auto h-screen px-4  grid md:grid-cols-2 ">
       <motion.div
         initial={{
           x: -200,
@@ -79,12 +71,12 @@ function About({}: Props) {
         variants={container}
         initial="hidden"
         whileInView="visible"
-        className="flex gap-4 text-white flex-col p-2 leading-5 md:justify-center   items-center"
+        className="flex gap-4 text-white flex-col p-2 leading-5 md:justify-center items-center"
       >
-        <h1 className="font-bold font-epilogue underline text-xl  md:mt-0 sm:text-2xl text-center text-cyan-400">
+        <h1 className="font-bold  text-3xl  md:mt-0 sm:text-2xl text-center ">
           Here&apos;s a little information about me.
         </h1>
-        <p className="px-4 leading-7  font-epilogue font-semibold text-center ">
+        <p className="px-4 leading-7  font-semibold text-center ">
           {text.map((word, i) => (
             <motion.span variants={child} key={i}>
               {word}{" "}
@@ -92,6 +84,7 @@ function About({}: Props) {
           ))}
         </p>
       </motion.div>
+      </div>
     </div>
   );
 }

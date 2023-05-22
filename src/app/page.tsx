@@ -7,6 +7,7 @@ import Footer from "../../components/Footer";
 import SkillsData from "./SkillsData";
 import Certificate from "../../components/Certificate";
 import CertificateData from "./CertificateData";
+import Contacts from "../../components/Contacts";
 
 export default function Home() {
   return (
@@ -30,6 +31,9 @@ export default function Home() {
       <section className="snap-start max-w-7xl mx-auto">
         {/* @ts-expect-error Server Component */}
         <CertificateData />
+      </section>
+      <section className="snap-start max-w-7xl mx-auto">
+        <Contacts />
       </section>
       <footer>
         <Footer />
