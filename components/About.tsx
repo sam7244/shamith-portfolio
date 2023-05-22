@@ -3,14 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { MyImage } from "../assets";
 import { motion } from "framer-motion";
-<<<<<<< HEAD
 import { Particles } from "./Particles";
-=======
-import styles from "../src/app/styles/Contacts.module.css"
-import TypingText from "./TypingText";
-import TitleText from "./TitleText";
-
->>>>>>> b827ebaff08e525e1bede3fdfec319b6b9854a65
 type Props = {};
 
 const text =
@@ -99,8 +92,7 @@ function About({}: Props) {
           ))}
         </p>
       </motion.div>
-      </div>
-    
+    </div>
   );
 }
 
