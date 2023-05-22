@@ -7,6 +7,9 @@ import Marquee from "react-fast-marquee";
 import { motion, LayoutGroup } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import styles from '../src/app/styles/Contacts.module.css'
+import TypingText from "./TypingText";
+import TitleText from "./TitleText";
 
 type Props = {};
 
@@ -85,15 +88,21 @@ function Projects({}: Props) {
   return (
     <LayoutGroup id="a">
       <div className="max-w-7xl flex  min-h-screen flex-col  justify-center   mx-auto">
+      <motion.div 
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className={`${styles.innerWidth} mx-auto flex  flex-col mb-10`}
+        >
+        <TypingText title="| Something Intresting" textStyles="text-center" />
+        <TitleText title="Projects " textStyles="text-center" />
+      </motion.div>
         <motion.div
           variants={container}
           initial="hidden"
           whileInView="visible"
-          className="mt-14 text-center text-white "
+          className=" text-center text-white "
         >
-          <h3 className="text-3xl py-1 font-epilogue font-bold dark:text-white text-cyan-400">
-            Projects{" "}
-          </h3>
           <p className="text-md font-epilogue py-2 leading-8 dark:text-gray-200 ">
             Since i&apos;m a beginner I&apos;ve done many full stack projects on{" "}
             {text.map((word, i) => (
