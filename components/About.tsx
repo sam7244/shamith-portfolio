@@ -3,6 +3,14 @@ import React from "react";
 import Image from "next/image";
 import { MyImage } from "../assets";
 import { motion } from "framer-motion";
+<<<<<<< HEAD
+import { Particles } from "./Particles";
+=======
+import styles from "../src/app/styles/Contacts.module.css"
+import TypingText from "./TypingText";
+import TitleText from "./TitleText";
+
+>>>>>>> b827ebaff08e525e1bede3fdfec319b6b9854a65
 type Props = {};
 
 const text =
@@ -41,7 +49,14 @@ function About({}: Props) {
   };
 
   return (
-    <div className=" max-w-7xl mx-auto h-screen px-4  grid md:grid-cols-2 ">
+    <div
+      className=" max-w-7xl relative mx-auto h-screen px-4 group/item  grid md:grid-cols-2 "
+      data-aos="fade-down"
+    >
+      <Particles
+        className="absolute inset-0 -z-10 opacity-10 group-hover/item:opacity-100   transition-opacity duration-1000 ease-in-out"
+        quantity={40}
+      />
       <motion.div
         initial={{
           x: -200,
@@ -85,7 +100,7 @@ function About({}: Props) {
         </p>
       </motion.div>
       </div>
-    </div>
+    
   );
 }
 
