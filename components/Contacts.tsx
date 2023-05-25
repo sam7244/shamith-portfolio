@@ -200,10 +200,10 @@ function Contacts() {
               <div
                 className="w-[45px] h-[45px]
                              rounded-[50%] flex items-center 
-                             justify-center text-2xl transition 
+                             justify-center text-2xl transition duration-200
                              ease-in-out text-[#15202B] bg-white
                               hover:bg-gray-200 hover:scale-[1.1]
-                               shrink delay-200"
+                               shrink"
               >
                 <FiAtSign />
               </div>
@@ -217,10 +217,10 @@ function Contacts() {
               <div
                 className="w-[45px] h-[45px]
                              rounded-[50%] flex items-center 
-                             justify-center text-2xl transition 
+                             justify-center text-2xl transition duration-200
                              ease-in-out text-[#15202B] bg-white
                               hover:bg-gray-200 hover:scale-[1.1]
-                               shrink delay-200"
+                               shrink "
               >
                 <FiPhone />
               </div>
@@ -231,10 +231,10 @@ function Contacts() {
               <div
                 className="w-[45px] h-[45px]
                              rounded-[50%] flex items-center 
-                             justify-center text-2xl transition 
+                             justify-center text-2xl transition duration-200
                              ease-in-out text-[#15202B] bg-white
                               hover:bg-gray-200 hover:scale-[1.1]
-                               shrink delay-200"
+                               shrink"
               >
                 <HiOutlineLocationMarker />
               </div>
@@ -250,10 +250,10 @@ function Contacts() {
                   rel="noreferrer"
                   className="w-[45px] h-[45px]
                              rounded-[50%] flex items-center 
-                             justify-center text-2xl transition 
+                             justify-center text-2xl transition duration-200
                              ease-in-out text-[#15202B] bg-white
                               hover:bg-gray-200 hover:scale-[1.1]
-                               shrink delay-200"
+                               shrink"
                 >
                   <FaTwitter aria-label="Twitter" />
                 </a>
@@ -265,10 +265,10 @@ function Contacts() {
                   rel="noreferrer"
                   className="w-[45px] h-[45px]
                              rounded-[50%] flex items-center 
-                             justify-center text-2xl transition 
+                             justify-center text-2xl transition duration-200
                              ease-in-out text-[#15202B] bg-white
                               hover:bg-gray-200 hover:scale-[1.1]
-                               shrink delay-200"
+                               shrink"
                 >
                   <FaGithub aria-label="GitHub" />
                 </a>
@@ -280,10 +280,10 @@ function Contacts() {
                   rel="noreferrer"
                   className="w-[45px] h-[45px]
                              rounded-[50%] flex items-center 
-                             justify-center text-2xl transition 
+                             justify-center text-2xl transition duration-200
                              ease-in-out text-[#15202B] bg-white
                               hover:bg-gray-200 hover:scale-[1.1]
-                               shrink delay-200"
+                               shrink"
                 >
                   <FaLinkedinIn aria-label="LinkedIn" />
                 </a>
@@ -296,10 +296,10 @@ function Contacts() {
                   rel="noreferrer"
                   className="w-[45px] h-[45px]
                              rounded-[50%] flex items-center 
-                             justify-center text-2xl transition 
+                             justify-center text-2xl transition duration-200
                              ease-in-out text-[#15202B] bg-white
                               hover:bg-gray-200 hover:scale-[1.1]
-                               shrink delay-200"
+                               shrink"
                 >
                   <FaStackOverflow aria-label="Stack Overflow" />
                 </a>
@@ -311,10 +311,10 @@ function Contacts() {
                   rel="noreferrer"
                   className="w-[45px] h-[45px]
                              rounded-[50%] flex items-center 
-                             justify-center text-2xl transition 
+                             justify-center text-2xl transition duration-200
                              ease-in-out text-[#15202B] bg-white
                               hover:bg-gray-200 hover:scale-[1.1]
-                               shrink delay-200"
+                               shrink"
                 >
                   <FaFacebook aria-label="facebook" />
                 </a>
