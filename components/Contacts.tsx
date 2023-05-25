@@ -74,7 +74,7 @@ function Contacts() {
 
     await client
       .create(contact)
-      .then((data) => {
+      .then(() => {
         setLoading(false);
         setIsFormSubmitted(true);
       })

@@ -47,7 +47,7 @@ function Projects({}: Props) {
   return (
     <div className="min-h-screen flex justify-center items-center">
       <div className="relative  max-w-6xl  px-4 mx-auto sm:px-6">
-        <div
+        {/* <div
           className="absolute inset-0 -z-10 -mx-28 rounded-t-[3rem] pointer-events-none overflow-hidden"
           aria-hidden="true"
         >
@@ -60,7 +60,7 @@ function Projects({}: Props) {
               alt="Features Illustration"
             />
           </div>
-        </div>
+        </div> */}
 
         <Particles
           className="absolute inset-0 -z-10 opacity-40 group-hover/item:opacity-100   transition-opacity duration-1000 ease-in-out"
