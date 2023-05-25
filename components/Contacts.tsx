@@ -7,7 +7,6 @@ import {
   FaFacebook,
   FaGithub,
   FaLinkedinIn,
-  FaMediumM,
   FaStackOverflow,
   FaTwitter,
 } from "react-icons/fa";
@@ -17,6 +16,8 @@ import { FiAtSign, FiPhone } from "react-icons/fi";
 import TypingText from "./TypingText";
 import TitleText from "./TitleText";
 import { motion } from "framer-motion";
+import e from "express";
+import { client } from "../lib/client";
 
 const socialsData = {
   github: "https://github.com/sam",
@@ -42,8 +43,46 @@ export const contactsData = {
 };
 
 function Contacts() {
-  const form = useRef();
-  const [success, setSuccess] = useState(false);
+  const [formData, setFormData] = useState<{
+    name: string;
+    email: string;
+    message: string;
+  }>({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isFormSubmitted, setIsFormSubmitted] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
+  const { name, email, message } = formData;
+  const [success, setSuccess] = useState<boolean>(false);
+
+  const handleFormInput = (e: any) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmission = async (e: any) => {
+    e.preventDefault();
+    setLoading(true);
+    const contact = {
+      _type: "contact",
+      name: name,
+      email: email,
+      message: message,
+    };
+
+    await client
+      .create(contact)
+      .then((data) => {
+        setLoading(false);
+        setIsFormSubmitted(true);
+      })
+      .catch((e) => {
+        console.log("Something went wrong");
+      });
+  };
+
   return (
     <div className={styles.contacts} id="contacts">
       <div className={styles.contactsContainer}>
@@ -58,7 +97,7 @@ function Contacts() {
         </motion.div>
         <div className={`${styles.contactsBody} `}>
           <div className={styles.contactsForm}>
-            <form className="relative">
+            <form className="relative" onSubmit={handleSubmission}>
               <div className={`${styles.inputContainer}`}>
                 <label
                   htmlFor="Name"
@@ -71,7 +110,9 @@ function Contacts() {
                 <input
                   placeholder="John Doe"
                   type="text"
-                  name="user_name"
+                  onChange={handleFormInput}
+                  value={name}
+                  name="name"
                   className={`${styles.formInput}  
                                     border-2 border-zinc-600 bg-zinc-900/10
                                      text-[#EFF3F4] font-medium transition 
@@ -89,9 +130,11 @@ function Contacts() {
                   Email
                 </label>
                 <input
+                  value={email}
+                  onChange={handleFormInput}
                   placeholder="John@doe.com"
                   type="email"
-                  name="user_email"
+                  name="email"
                   className={`${styles.formInput}  
                                     border-2 border-[#8B98A5]  bg-zinc-900/10
                                      text-[#EFF3F4] font-medium transition
@@ -109,6 +152,8 @@ function Contacts() {
                   Message
                 </label>
                 <textarea
+                  value={message}
+                  onChange={handleFormInput}
                   placeholder="Type your message...."
                   name="message"
                   className={`${styles.formMessage} 
@@ -121,6 +166,7 @@ function Contacts() {
               <div className={styles.submitBtn}>
                 <button
                   type="submit"
+                  onSubmit={handleSubmission}
                   className="px-4  py-2 ml-2 hover:scale-110 transition duration-500 ease-in-out text-md rounded-md w-[50%] md:w-[30%]  bg-white text-black "
                 >
                   <p className="font-bold">{!success ? "Send" : "Sent"}</p>
