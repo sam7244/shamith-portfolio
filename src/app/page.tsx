@@ -11,9 +11,7 @@ import Contacts from "../../components/Contacts";
 
 export default function Home() {
   return (
-
     <div className="snap-y snap-mandatory mx-auto min-h-screen p-4">
-
       <Navbar />
       <section className="snap-start max-w-7xl mx-auto">
         <Hero />
@@ -26,12 +24,13 @@ export default function Home() {
       </section>
       <section className="snap-start max-w-7xl mx-auto">
         {/* @ts-expect-error Server Component */}
-        <SkillsData />
+        <CertificateData />
       </section>
       <section className="snap-start max-w-7xl mx-auto">
         {/* @ts-expect-error Server Component */}
-        <CertificateData />
+        <SkillsData />
       </section>
+
       <section className="snap-start max-w-7xl mx-auto">
         <Contacts />
       </section>

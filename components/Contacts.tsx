@@ -84,7 +84,15 @@ function Contacts() {
   };
 
   return (
-    <div className={styles.contacts} id="contacts">
+    <div className={`${styles.contacts} relative`} id="contacts">
+      <div
+        className="absolute inset-0 overflow-hidden pointer-events-none -z-10"
+        aria-hidden="true"
+      >
+        <div className="absolute top-0 flex items-center justify-center w-1/3 -translate-y-1/2 left-1/2 -translate-x-1/2 aspect-square">
+          <div className="absolute inset-0 translate-z-0 bg-primary-500 rounded-full blur-[120px] opacity-50" />
+        </div>
+      </div>
       <div className={styles.contactsContainer}>
         <motion.div
           initial="hidden"
