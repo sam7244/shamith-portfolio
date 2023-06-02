@@ -90,7 +90,6 @@ function About({}: Props) {
             alt="vercel"
             height={40}
             width={40}
-            unoptimized
             className="object-contain  rounded-lg h-[200px] w-[200px] sm:h-[350px] sm:w-[250px] md:h-[50vh] md:w-[50vh]"
             src={MyImage}
           />

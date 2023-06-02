@@ -1,7 +1,5 @@
-import sanityClient from "@sanity/client";
 import createImageUrlBuilder from "@sanity/image-url";
 import { createClient } from "next-sanity";
-import { type } from "os";
 
 export const client = createClient({
   projectId: "6uwhnivu",
