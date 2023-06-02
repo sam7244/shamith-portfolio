@@ -12,7 +12,7 @@ type Props = {
 
 const Skills = ({ skills }: Props) => {
   return (
-    <div className="flex items-center  flex-col h-screen">
+    <div className="flex items-center justify-center md:justify-start flex-col h-screen">
       <div>
         <motion.div
           initial="hidden"

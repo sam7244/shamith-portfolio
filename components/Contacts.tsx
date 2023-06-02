@@ -72,7 +72,9 @@ function Contacts() {
       message: message,
     };
 
-    await client
+    console.log(contact);
+
+    client
       .create(contact)
       .then(() => {
         setLoading(false);
@@ -207,7 +209,7 @@ function Contacts() {
             >
               <div
                 className="w-[45px] h-[45px]
-                             rounded-[50%] flex items-center 
+                             rounded-full flex items-center 
                              justify-center text-2xl transition duration-200
                              ease-in-out text-[#15202B] bg-white
                               hover:bg-gray-200 hover:scale-[1.1]
@@ -224,7 +226,7 @@ function Contacts() {
             >
               <div
                 className="w-[45px] h-[45px]
-                             rounded-[50%] flex items-center 
+                             rounded-full flex items-center 
                              justify-center text-2xl transition duration-200
                              ease-in-out text-[#15202B] bg-white
                               hover:bg-gray-200 hover:scale-[1.1]
@@ -238,7 +240,7 @@ function Contacts() {
             <div className={styles.personalDetails}>
               <div
                 className="w-[45px] h-[45px]
-                             rounded-[50%] flex items-center 
+                             rounded-full flex items-center 
                              justify-center text-2xl transition duration-200
                              ease-in-out text-[#15202B] bg-white
                               hover:bg-gray-200 hover:scale-[1.1]

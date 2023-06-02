@@ -8,7 +8,6 @@ import { Particles } from "./Particles";
 import { HighlightGroup, HighlighterItem } from "./HighLighterItem";
 
 type props = {
-  key: string;
   certificate: CertificateType;
   index: number;
 };
@@ -37,7 +36,7 @@ const fadeIn = (
   },
 });
 
-const CertificateCard = ({ key, certificate, index }: props) => {
+const CertificateCard = ({ certificate, index }: props) => {
   return (
     <HighlightGroup className="h-full  group">
       <div
