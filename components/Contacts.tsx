@@ -184,6 +184,13 @@ function Contacts() {
                                      text-[#EFF3F4] font-medium transition`}
                   />
                 </div>
+                <div className="flex items-center justify-start w-full px-2">
+                  <AlertDialogTrigger asChild>
+                    <Button className="bg-white text-black">
+                      Send Message
+                    </Button>
+                  </AlertDialogTrigger>
+                </div>
               </form>
             </div>
             <div className={styles.contactsDetails}>
@@ -316,9 +323,6 @@ function Contacts() {
               </div>
             </div>
           </div>
-          <AlertDialogTrigger asChild>
-            <Button className="bg-white text-black">Send Message</Button>
-          </AlertDialogTrigger>
         </div>
       </div>
 
@@ -332,8 +336,8 @@ function Contacts() {
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction onClick={handleSubmission}>
-            Continue
+          <AlertDialogAction>
+            <button onClick={handleSubmission}>Continue</button>
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
