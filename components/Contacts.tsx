@@ -64,7 +64,7 @@ function Contacts() {
     email: "",
     message: "",
   });
-  const [isFormSubmitted, setIsFormSubmitted] = useState<boolean>(true);
+  const [isFormSubmitted, setIsFormSubmitted] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
   const { name, email, message } = formData;
   const [success, setSuccess] = useState<boolean>(false);
@@ -88,8 +88,9 @@ function Contacts() {
       .create(contact)
       .then(() => {
         setLoading(false);
-        console.log("success");
-        setIsFormSubmitted(true);
+
+        setIsFormSubmitted((prev) => !prev);
+        setFormData({ name: "", email: "", message: "" });
       })
       .catch((e) => {
         console.log("Something went wrong");
@@ -186,7 +187,10 @@ function Contacts() {
                 </div>
                 <div className="flex items-center justify-start w-full px-2">
                   <AlertDialogTrigger asChild>
-                    <Button className="bg-white text-black">
+                    <Button
+                      //
+                      className="bg-white text-black"
+                    >
                       Send Message
                     </Button>
                   </AlertDialogTrigger>
@@ -328,17 +332,22 @@ function Contacts() {
 
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+          <AlertDialogTitle>
+            Your Response Will Be Send To Shamith Kumar
+          </AlertDialogTitle>
           <AlertDialogDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
+            {!isFormSubmitted
+              ? " Click Continue To Send Your Response | (Cancel) To Cancel The Submission"
+              : "Thank You For Getting In Touch!"}
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction>
-            <button onClick={handleSubmission}>Continue</button>
-          </AlertDialogAction>
+          {!isFormSubmitted && (
+            <AlertDialogAction onClick={handleSubmission}>
+              <button>Continue</button>
+            </AlertDialogAction>
+          )}
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
