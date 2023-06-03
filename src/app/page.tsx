@@ -8,31 +8,37 @@ import SkillsData from "./SkillsData";
 import Certificate from "../../components/Certificate";
 import CertificateData from "./CertificateData";
 import Contacts from "../../components/Contacts";
+import BottomNavigator from "../../components/BottomNavigator";
 
 export default function Home() {
   return (
-    <div className="snap-y snap-mandatory mx-auto min-h-screen p-4">
+    <div id="home" className="snap-y snap-mandatory mx-auto min-h-screen p-4">
       <Navbar />
       <section className="snap-start max-w-7xl mx-auto">
         <Hero />
       </section>
-      <section className="snap-center max-w-7xl mx-auto">
+      <section id="about" className="  snap-center max-w-7xl mx-auto">
         <About />
+        <BottomNavigator location={"home"} />
       </section>
-      <section className="snap-start max-w-7xl mx-auto">
+      <section id="projects" className=" snap-start max-w-7xl mx-auto">
         <Projects />
+        <BottomNavigator location={"about"} />
       </section>
-      <section className="snap-start max-w-7xl mx-auto">
+      <section id="certificates" className="snap-start max-w-7xl mx-auto">
         {/* @ts-expect-error Server Component */}
         <CertificateData />
+        <BottomNavigator location={"projects"} />
       </section>
       <section className="snap-start max-w-7xl mx-auto">
         {/* @ts-expect-error Server Component */}
         <SkillsData />
+        <BottomNavigator location={"certificates"} />
       </section>
 
       <section className="snap-start max-w-7xl mx-auto">
         <Contacts />
+        <BottomNavigator location={"home"} />
       </section>
       <footer>
         <Footer />

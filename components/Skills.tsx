@@ -12,13 +12,13 @@ type Props = {
 
 const Skills = ({ skills }: Props) => {
   return (
-    <div className="flex items-center justify-center md:justify-start flex-col h-screen">
+    <div className="flex  items-center justify-center md:justify-start flex-col h-screen">
       <div>
         <motion.div
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
-          className={`${styles.innerWidth} mx-auto flex  flex-col mb-10`}
+          className={`${styles.innerWidth} mx-auto flex   flex-col mb-10`}
         >
           <TypingText title="| Test My SKills" textStyles="text-center" />
           <TitleText title="Skills " textStyles="text-center" />

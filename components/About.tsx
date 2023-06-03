@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Particles } from "./Particles";
 import TitleText from "./TitleText";
 import TypingText from "./TypingText";
+
 type Props = {};
 
 const text =
