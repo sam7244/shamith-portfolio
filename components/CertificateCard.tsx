@@ -8,7 +8,6 @@ import { Particles } from "./Particles";
 import { HighlightGroup, HighlighterItem } from "./HighLighterItem";
 
 type props = {
-  key: string;
   certificate: CertificateType;
   index: number;
 };
@@ -37,7 +36,7 @@ const fadeIn = (
   },
 });
 
-const CertificateCard = ({ key, certificate, index }: props) => {
+const CertificateCard = ({ certificate, index }: props) => {
   return (
     <HighlightGroup className="h-full  group">
       <div
@@ -84,7 +83,7 @@ const CertificateCard = ({ key, certificate, index }: props) => {
                   </div>
                   <Link href={certificate?.link} target="_blank">
                     <div
-                      className="lg:flex hidden items-center justify-center w-[100px] h-[100px] rounded-full   bg-transparent bg-clip-text border-zinc-500
+                      className="lg:flex hidden    items-center justify-center w-[100px] h-[100px] rounded-full   bg-transparent bg-clip-text border-zinc-500
     border-[1px] "
                     >
                       <Image

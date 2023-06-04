@@ -47,7 +47,7 @@ function Projects({}: Props) {
   return (
     <div className="min-h-screen flex justify-center items-center">
       <div className="relative  max-w-6xl  px-4 mx-auto sm:px-6">
-        <div
+        {/* <div
           className="absolute inset-0 -z-10 -mx-28 rounded-t-[3rem] pointer-events-none overflow-hidden"
           aria-hidden="true"
         >
@@ -60,7 +60,7 @@ function Projects({}: Props) {
               alt="Features Illustration"
             />
           </div>
-        </div>
+        </div> */}
 
         <Particles
           className="absolute inset-0 -z-10 opacity-40 group-hover/item:opacity-100   transition-opacity duration-1000 ease-in-out"
@@ -89,7 +89,7 @@ function Projects({}: Props) {
           </p>
         </motion.div>
         <div className="  h-full w-full flex overflow-hidden relative transform   rounded-lg gap-2 py-10   ">
-          <div className="flex justify-center">
+          <div className="flex justify-center gap-3">
             <div className="flex flex-col lg:flex-row    items-center max-w-7xl w-full m-4">
               <div className="bg-no-repeat bg-cover hover:scale-110 transition duration-300 ease-in-out rounded-lg bg-center lg:bg-left flex flex-col w-[90%] lg:w-[40%] h-96 m-2 brightness-110 hover:brightness-90 ">
                 <img
