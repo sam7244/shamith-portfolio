@@ -1,4 +1,4 @@
-import MyImage from "./my-img.jpg";
+import MyImage from "./my-img.jpeg";
 import lottie from "./lottie.json";
 import HeroImg from "./hero.png";
 import GlowTop from "./glow-top.svg";

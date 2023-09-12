@@ -13,6 +13,7 @@ type SkillData = {
 function Skill({ skill, directionLeft }: SkillData) {
   return (
     <div className="group relative flex cursor-pointer ">
+      
       <motion.img
         initial={{
           x: directionLeft ? -100 : 100,

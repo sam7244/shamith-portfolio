@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
-
-import { motion } from "framer-motion";
+import { motion ,useScroll ,useSpring ,useTransform} from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 import { BiMenuAltRight } from "react-icons/bi";
 import Link from "next/link";
@@ -18,9 +17,30 @@ function Navbar({}: Props) {
   const handleClick = () => {
     setClick((prev) => !prev);
   };
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 200,
+    damping: 50
+  });
+  
+  const hue = useTransform(scrollYProgress, [0, 1], [216, 156]);
+  
+  function progressBarColor(hueValue : any) {
+    return `hsl(${hueValue}, 100%, 50%)`;
+  }
+
 
   return (
     <motion.nav className="sticky top-0 z-30 max-w-7xl mx-auto">
+             <motion.div
+  id="navbar-progress"
+  animate={{
+    backgroundColor: progressBarColor(hue.get())
+  }}
+  style={{
+    scaleX: scaleX
+  }}
+/>
       <div className="flex justify-between uppercase overflow-hidden  items-center h-18 pt-3 mx-auto px-4 max-w-7xl text-black">
         <motion.h1
           initial={{ x: "-100vw" }}
@@ -74,7 +94,7 @@ function Navbar({}: Props) {
             variants={variants}
             className="group transition duration-500 p-4 cursor-pointer"
           >
-            Testimonials
+            Certifications
             <span className="max-w-0 block group-hover:max-w-full h-0.5 bg-gradient-to-r from-zinc-200/60 via-zinc-200 to-zinc-200/60 transition-all duration-500"></span>
           </motion.li>
 
@@ -143,7 +163,9 @@ function Navbar({}: Props) {
             </motion.li>
           </motion.ul>
         </div>
+ 
       </div>
+
     </motion.nav>
   );
 }

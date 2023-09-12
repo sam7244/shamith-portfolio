@@ -18,8 +18,8 @@ function Hero({}: Props) {
         >
           Shamith Kumar Jain
         </h1>
-        <h3 className="text-2xl   md:text-4xl p-2  font-epilogue text-white font-semibold">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        <h3 className="text-2xl   md:text-2xl p-2  font-epilogue text-white font-semibold">
+        Transforming concepts into captivating digital journeys
         </h3>
         <button className="px-4  py-2 ml-2 font-bold hover:scale-110 transition duration-500 ease-in-out  rounded-md w-[50%] md:w-[30%]  bg-white text-black">
           My Resume

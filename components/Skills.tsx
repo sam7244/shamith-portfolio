@@ -13,13 +13,24 @@ type Props = {
 const Skills = ({ skills }: Props) => {
   return (
     <div className="flex flex-col min-h-screen">
+       <div
+        className="absolute inset-0 overflow-hidden pointer-events-none -z-10"
+        aria-hidden="true"
+        >
+        <div className="absolute top-0 flex items-center justify-center w-1/3 -translate-y-1/2 left-1/2 -translate-x-1/2 aspect-square">
+          <div className="absolute inset-0 translate-z-0 bg-primary-500 rounded-full blur-[120px] opacity-50" />
+        </div>
+      </div>
     <div>
+        {/* Radial gradient */}
+       
     <motion.div 
      initial="hidden"
      whileInView="show"
      viewport={{ once: false, amount: 0.25 }}
-     className={`${styles.innerWidth} mx-auto flex  flex-col mb-10`}
+     className={`${styles.innerWidth} mx-auto flex mt-10  flex-col mb-10`}
      >
+      
         <TypingText title="| Test My SKills" textStyles="text-center" />
         <TitleText title="Skills " textStyles="text-center" />
     </motion.div>
