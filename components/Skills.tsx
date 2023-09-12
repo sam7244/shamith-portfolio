@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Skill from "./Skill";
 import { SkillType } from "../types";
-import styles from  '../src/app/styles/Contacts.module.css'
+import styles from "../src/app/styles/Contacts.module.css";
 import TypingText from "./TypingText";
 import TitleText from "./TitleText";
 type Props = {
@@ -39,29 +39,31 @@ const Skills = ({ skills }: Props) => {
     <motion.div
       className=" flex relative flex-col text-center md:text-left xl:flex-row
     max-w-[2000px] xl:px-10  justify-center xl:space-y-0 mx-auto items-center"
-    >
-      
-      
-      <div className="grid  grid-cols-4  gap-5 ">
-        {skills?.slice(0, skills?.length / 2).map((skill: any, idx: number) => (
-          <Skill
-            key={skill?._id}
-            idx={idx}
-            skill={skill}
-            directionLeft={true}
-          />
-        ))}
-        {skills?.slice(skills?.length / 2).map((skill: any, idx: number) => (
-          <Skill
-            key={skill?._id}
-            idx={idx}
-            skill={skill}
-            directionLeft={false}
-          />
-        ))}
+        >
+          <div className="grid  grid-cols-4  gap-5 ">
+            {skills
+              ?.slice(0, skills?.length / 2)
+              .map((skill: any, idx: number) => (
+                <Skill
+                  key={skill?._id}
+                  idx={idx}
+                  skill={skill}
+                  directionLeft={true}
+                />
+              ))}
+            {skills
+              ?.slice(skills?.length / 2)
+              .map((skill: any, idx: number) => (
+                <Skill
+                  key={skill?._id}
+                  idx={idx}
+                  skill={skill}
+                  directionLeft={false}
+                />
+              ))}
+          </div>
+        </motion.div>
       </div>
-    </motion.div>
-    </div>
     </div>
   );
 };
