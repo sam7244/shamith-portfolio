@@ -28,7 +28,7 @@ import { FiAtSign, FiPhone } from "react-icons/fi";
 import TypingText from "./TypingText";
 import TitleText from "./TitleText";
 import { motion } from "framer-motion";
-import e from "express";
+
 import { client } from "../lib/client";
 
 const socialsData = {
@@ -98,30 +98,11 @@ function Contacts() {
   };
 
   return (
-<<<<<<< HEAD
-    <div className={styles.contacts} id="contacts">
-      {/* Radial gradient */}
-      <div
-        className="absolute inset-0 overflow-hidden pointer-events-none -z-10"
-        aria-hidden="true"
-      >
-        <div className="absolute top-0 flex items-center justify-center w-1/3 -translate-y-1/2 left-1/2 -translate-x-1/2 aspect-square">
-          <div className="absolute inset-0 translate-z-0 bg-primary-500 rounded-full blur-[120px] opacity-50" />
-        </div>
-      </div>
-      <div className={styles.contactsContainer}>
-        <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: false, amount: 0.25 }}
-          className={`${styles.innerWidth} mx-auto flex  flex-col mb-10`}
-=======
     <AlertDialog>
       <div className={`${styles.contacts} relative`} id="contacts">
         <div
           className="absolute inset-0 overflow-hidden pointer-events-none -z-10"
           aria-hidden="true"
->>>>>>> 1679d88bae562e03e675ea1f4688522d4bce0c7c
         >
           <div className="absolute top-0 flex items-center justify-center w-1/3 -translate-y-1/2 left-1/2 -translate-x-1/2 aspect-square">
             <div className="absolute inset-0 translate-z-0 bg-primary-500 rounded-full blur-[120px] opacity-50" />
