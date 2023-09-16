@@ -114,7 +114,7 @@ function  Projects  ({works}: Props)  {
             <div className="flex flex-col lg:flex-row    items-center max-w-7xl w-[100%] m-4">
               
             {
-          works.map((work:any) =>(
+          works.map((work:any,idx :any) =>(
             <div className="bg-no-repeat  bg-cover hover:scale-110 transition duration-300 ease-in-out rounded-lg bg-center lg:bg-left flex flex-col w-[90%] lg:w-[40%] h-96 m-2 brightness-110 hover:brightness-90 ">
                 <img
                   src={urlFor(work?.imgUrl)?.url()}
