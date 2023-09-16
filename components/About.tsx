@@ -9,7 +9,7 @@ import TitleText from "./TitleText";
 type Props = {};
 
 const text =
-  `.I'm a tech enthusiast who thrives at the intersection of innovation and code, turning ideas into digital reality one line at a time.`.split(
+  `I'm a tech enthusiast who thrives at the intersection of innovation and code, turning ideas into digital reality one line at a time.`.split(
     " "
   );
 

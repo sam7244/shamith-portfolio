@@ -19,6 +19,17 @@ export interface SkillType extends SanityBody {
   icon: Image;
 }
 
+export interface WorksType extends SanityBody {
+  _type: "Works";
+  id:string;
+  title: string;
+  Description: string;
+  projectLink: string;
+  codeLink:string;
+  imgUrl:Image;
+}
+
+
 export interface CertificateType extends SanityBody {
   _type: "certificate";
   name: string;

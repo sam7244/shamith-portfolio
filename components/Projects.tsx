@@ -10,12 +10,22 @@ import TypingText from "./TypingText";
 import TitleText from "./TitleText";
 import { useRouter } from "next/navigation";
 import { Particles } from "./Particles";
+import { WorksType } from "../types";
+import { groq } from "next-sanity";
+import { client } from "../lib/client";
+import { urlFor } from "../lib/client";
 
-type Props = {};
+type Props = {
+  works : WorksType[];
+};
+
 
 const text = ` Click To See My Works In Detail | `.split(" ");
 
-function Projects({}: Props) {
+function  Projects  ({works}: Props)  {
+  console.log("her eis the data about the projects",works);
+   
+
   const container = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
@@ -97,12 +107,17 @@ function Projects({}: Props) {
             ))}{" "}
           </p>
         </motion.div>
+
+       
         <div className="  h-full w-full flex overflow-hidden relative transform   rounded-lg gap-2 py-10   ">
           <div className="flex justify-center gap-3">
-            <div className="flex flex-col lg:flex-row    items-center max-w-7xl w-full m-4">
-              <div className="bg-no-repeat bg-cover hover:scale-110 transition duration-300 ease-in-out rounded-lg bg-center lg:bg-left flex flex-col w-[90%] lg:w-[40%] h-96 m-2 brightness-110 hover:brightness-90 ">
+            <div className="flex flex-col lg:flex-row    items-center max-w-7xl w-[100%] m-4">
+              
+            {
+          works.map((work:any) =>(
+            <div className="bg-no-repeat  bg-cover hover:scale-110 transition duration-300 ease-in-out rounded-lg bg-center lg:bg-left flex flex-col w-[90%] lg:w-[40%] h-96 m-2 brightness-110 hover:brightness-90 ">
                 <img
-                  src="https://source.unsplash.com/random/500x400/?girl"
+                  src={urlFor(work?.imgUrl)?.url()}
                   alt=""
                   className="h-full object-fill rounded-lg"
                 />
@@ -110,120 +125,22 @@ function Projects({}: Props) {
                   <div className="flex flex-col items-center justify-center p-2 text-gray-300">
                     <div className="font-bold text-lg m-2 mt-[30%]">
                       {" "}
-                      <a href="">
-                        Everything has beauty, but not everyone sees it.
+                      <a href={work.projectLink}>
+                        {work.title}
                       </a>
                     </div>
                     <div className=" m-2 text-sm">
-                      <a href="">
-                        There is no one definition of beauty. Beauty standards
-                        vary from culture to culture and change over time. In
-                        Western cultures, beauty standards have traditionally
-                        been based on ideals of youth and femininity.{" "}
+                      <a href={work.projectLink}>
+                        {work.description}{" "}
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
+          ))
+        }
 
-              <div className="bg-no-repeat  hover:scale-110 transition duration-300 ease-in-out bg-cover bg-center lg:bg-left flex flex-col w-[90%] lg:w-[40%] h-96 m-2 brightness-110 hover:brightness-90 ">
-                <img
-                  src="https://source.unsplash.com/random/500x400/?girl"
-                  className="h-full object-fill rounded-lg"
-                />
-                <div className="absolute inset-0 rounded-lg  bg-zinc-900 bg-opacity-50">
-                  <div className="flex flex-col items-center justify-center p-2 text-gray-300">
-                    <div className="font-bold text-lg m-2 mt-[30%]">
-                      {" "}
-                      <a href="">
-                        Everything has beauty, but not everyone sees it.
-                      </a>
-                    </div>
-                    <div className=" m-2 text-sm">
-                      <a href="">
-                        There is no one definition of beauty. Beauty standards
-                        vary from culture to culture and change over time. In
-                        Western cultures, beauty standards have traditionally
-                        been based on ideals of youth and femininity.{" "}
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              <div className="bg-no-repeat bg-cover  hover:scale-110 transition duration-300 ease-in-out bg-center lg:bg-left flex flex-col w-[90%] lg:w-[40%] h-96 m-2 brightness-110 hover:brightness-90 ">
-                <img
-                  src="https://source.unsplash.com/random/500x400/?girl"
-                  className="h-full object-fill rounded-lg "
-                />
-                <div className="absolute inset-0 rounded-lg  bg-zinc-900 bg-opacity-50">
-                  <div className="flex flex-col items-center justify-center p-2 text-gray-300">
-                    <div className="font-bold text-lg m-2 mt-[30%]">
-                      {" "}
-                      <a href="">
-                        Everything has beauty, but not everyone sees it.
-                      </a>
-                    </div>
-                    <div className=" m-2 text-sm">
-                      <a href="">
-                        There is no one definition of beauty. Beauty standards
-                        vary from culture to culture and change over time. In
-                        Western cultures, beauty standards have traditionally
-                        been based on ideals of youth and femininity.{" "}
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-no-repeat bg-cover  hover:scale-110 transition duration-300 ease-in-out bg-center lg:bg-left flex flex-col w-[90%] lg:w-[40%] h-96 m-2 brightness-110 hover:brightness-90 ">
-                <img
-                  src="https://source.unsplash.com/random/500x400/?forest"
-                  className="h-full object-fill rounded-lg"
-                />
-                <div className="absolute inset-0 rounded-lg  bg-zinc-900 bg-opacity-50">
-                  <div className="flex flex-col items-center justify-center p-2 text-gray-300">
-                    <div className="font-bold text-lg m-2 mt-[30%]">
-                      {" "}
-                      <a href="">
-                        There is no Wi-Fi in the forest, but I promise you will
-                        find a better connection
-                      </a>
-                    </div>
-                    <div className=" m-2 text-sm">
-                      <a href="">
-                        There is something about mountains that is both humbling
-                        and invigorating. Their very presence seems to demand
-                        respect and even a certain amount of reverence.{" "}
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-no-repeat hover:scale-110 transition duration-300 ease-in-out   bg-cover bg-center lg:bg-left flex flex-col w-[90%] lg:w-[40%] h-96 m-2 brightness-110 hover:brightness-90 ">
-                <img
-                  src="https://source.unsplash.com/random/500x400/?galaxy"
-                  className="h-full object-fill rounded-lg "
-                />
-                <div className="absolute inset-0 rounded-lg  bg-zinc-900 bg-opacity-50">
-                  <div className="flex flex-col items-center justify-center p-2 text-gray-300">
-                    <div className="font-bold text-lg m-2 mt-[30%]">
-                      {" "}
-                      <a href="">
-                        The twinkle in your eyes is light the brightest stars on
-                        the clearest night.
-                      </a>
-                    </div>
-                    <div className=" m-2 text-sm">
-                      <a href="">
-                        There is something magical about the universe. It is so
-                        vast and mysterious, and it is always expanding. Every
-                        day, we are learning more about it and discovering new
-                        things.
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

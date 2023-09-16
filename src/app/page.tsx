@@ -1,6 +1,6 @@
 import About from "../../components/About";
 import Hero from "../../components/Hero";
-
+import WorksData from "./WorksData"
 import Navbar from "../../components/Navbar";
 import Projects from "../../components/Projects";
 import Footer from "../../components/Footer";
@@ -22,7 +22,8 @@ export default function Home() {
         <BottomNavigator location={"home"} />
       </section>
       <section id="projects" className=" snap-start max-w-7xl mx-auto">
-        <Projects />
+        {/* @ts-expect-error Server Component */}
+        <WorksData />
         <BottomNavigator location={"about"} />
       </section>
       <section id="certificates" className="snap-start max-w-7xl mx-auto">
